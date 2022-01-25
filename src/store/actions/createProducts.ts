@@ -1,9 +1,7 @@
 import axios from 'axios'
-import { url } from 'inspector'
 import { AnyAction } from 'redux'
 import { ThunkAction } from 'redux-thunk'
 import { addLoading, removeError, removeLoading } from '.'
-import { SET_PRODUCTS } from './types'
 
 export default function createProduct(
   values: Product

@@ -4,7 +4,6 @@ import s from './style.module.sass'
 import Button from 'components/Button'
 import removeProduct from 'store/actions/removeProduct'
 import { useDispatch } from 'react-redux'
-import getProducts from 'store/actions/getProducts'
 
 interface I {
   data: ServerProduct

@@ -18,8 +18,6 @@ const ProductsList: React.FC = () => {
       dispatch({ type: SET_PRODUCTS, payload: [] })
     }
   }, [])
-
-  list.map((i) => console.log(i.productTitle))
   return (
     <Page>
       <div className={s.Block}>

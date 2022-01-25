@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { AnyAction } from 'redux'
 import { ThunkAction } from 'redux-thunk'
-import getProducts from './getProducts'
 import { SET_PRODUCTS } from './types'
 
 export default function removeProduct(id: string): ThunkAction<
@@ -25,7 +24,6 @@ export default function removeProduct(id: string): ThunkAction<
       )
       .then((res) => {
         dispatch({type: SET_PRODUCTS, payload: getState().products.filter(i => i.id !== id)})
-        const data = res.data
       }).catch((e) => e)
   }
 }
