@@ -21,10 +21,10 @@ export default function getProducts(): ThunkAction<
             Authorization: `Bearer ${accessToken}`,
           },
         }
-      ).catch(e => e)
+      )
       .then((res) => {
         const data = res.data.items.map((i: any) => ({...i.fields, id: i.sys.id}))
         dispatch({ type: SET_PRODUCTS, payload: data })
-      })
+      }).catch(e => e)
   }
 }
